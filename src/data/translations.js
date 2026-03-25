@@ -3,9 +3,10 @@ export const translations = {
         // Navigation
         nav: {
             home: 'Inicio',
+            reviews: 'Reseñas',
             content: 'Contenido',
             achievements: 'Logros',
-            social: 'Contacto'
+            social: 'Redes'
         },
         // Hero Section
         hero: {
@@ -51,7 +52,7 @@ export const translations = {
         },
         //Proyectos
         projects: {
-            title: 'Proyectos Destacados',  
+            title: 'Mis reseñas de videojuegos',  
             project1:{
                 title: 'Proyecto Alpha',
                 description: 'Una revolucionaria aplicacion web con tecnologias modernas.',
@@ -78,9 +79,10 @@ export const translations = {
         // Navigation
         nav: {
             home: 'Home',
+            reviews: 'Reviews',
             content: 'Content',
             achievements: 'Achievements',
-            social: 'Contact'
+            social: 'Socials'
         },
         // Hero Section
         hero: {
@@ -126,7 +128,7 @@ export const translations = {
         },
         //Projects
         projects: {
-            title: 'Featured Projects',
+            title: 'Personal Games Reviews',
             project1:{
                 title: 'Projects Alpha',
                 description: 'ProjectsA revolutionary web application built with modern technologies.',

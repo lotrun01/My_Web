@@ -263,10 +263,14 @@ a:hover {
   .nav {
     top: var(--spacing-sm);
     width: calc(100% - var(--spacing-lg));
+    border-radius: 20px;
+    padding: var(--spacing-sm);
   }
   
   .nav-list {
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .nav-link {

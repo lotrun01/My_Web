@@ -7,7 +7,7 @@ const sortedProjects = projects.sort((a, b) => a.data.order - b.data.order);
 
 <section id="projects" class="section">
   <div class="container">
-    <h2 class="section-title gradient-text">Proyectos Destacados</h2>
+    <h2 class="section-title gradient-text" data-i18n="projects.title">Personal Games Reviews</h2>
     <div class="projects-grid">
       {sortedProjects.map((project) => (
         <article class="project-card glass-card">
