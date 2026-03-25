@@ -1,0 +1,54 @@
+---
+// Language Switcher Component
+---
+
+<div class="language-switcher">
+  <button id="lang-toggle" class="lang-button" aria-label="Toggle language">
+    <span class="lang-text" data-lang="es">ES</span>
+    <span class="lang-text" data-lang="en">EN</span>
+  </button>
+</div>
+
+<script>
+  import '../scripts/language-switcher-logic';
+</script>
+
+<style>
+  .language-switcher {
+    display: flex;
+    align-items: center;
+  }
+
+  .lang-button {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 25px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    cursor: pointer;
+    display: flex;
+    gap: var(--spacing-xs);
+    transition: all var(--transition-base);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .lang-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-accent-primary);
+  }
+
+  .lang-text {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    transition: all var(--transition-base);
+    border-radius: 20px;
+  }
+
+  .lang-text.active {
+    color: var(--color-text-primary);
+    background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+  }
+</style>

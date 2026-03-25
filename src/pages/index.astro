@@ -1,0 +1,60 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Features from '../components/Features.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LOTRUN - Creador de contenido de gaming, tecnología y más. Portfolio interactivo con +100K suscriptores. Streams diarios y contenido exclusivo." />
+    <meta name="keywords" content="LOTRUN, gaming, youtuber, streamer, tecnología, gaming channel, twitch, contenido creativo, reviews" />
+    <meta name="author" content="LOTRUN" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LOTRUN - Gaming & Tech Creator" />
+    <meta property="og:description" content="Portfolio de creador de contenido - Gaming, Tech y más" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="LOTRUN - Gaming & Tech Creator" />
+    <meta property="twitter:description" content="Portfolio de creador de contenido - Gaming, Tech y más" />
+    
+    <title>LOTRUN - Portfolio de Creador de Contenido</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <!-- Three.js Canvas Background -->
+    <canvas id="three-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <Navigation />
+    
+    <!-- Main Content -->
+    <main>
+      <Hero />
+      <About />
+      <Features />
+      <Projects />
+      <Contact />
+    </main>
+    
+    <!-- Three.js Script -->
+    <script>
+      import '../scripts/three-scene.js';
+    </script>
+  </body>
+</html>

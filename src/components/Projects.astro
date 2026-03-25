@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+const sortedProjects = projects.sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title gradient-text">Proyectos Destacados</h2>
+    <div class="projects-grid">
+      {sortedProjects.map((project) => (
+        <article class="project-card glass-card">
+          <div class="project-content">
+            <h3 class="project-title">{project.data.title}</h3>
+            <p class="project-description">{project.data.description}</p>
+            <div class="project-tags">
+              {project.data.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+            {project.data.link && (
+              <a href={project.data.link} target="_blank" rel="noopener noreferrer" class="project-link">
+                Ver Proyecto →
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-title {
+    text-align: center;
+    font-size: var(--text-4xl);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .project-card {
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .project-title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
+  }
+
+  .project-description {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: var(--text-sm);
+    color: var(--color-accent-primary);
+  }
+
+  .project-link {
+    display: inline-block;
+    color: var(--color-accent-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .project-link:hover {
+    color: var(--color-accent-primary);
+  }
+</style>

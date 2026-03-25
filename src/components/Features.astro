@@ -1,0 +1,102 @@
+---
+// Features section component
+---
+
+<section id="features" class="section">
+  <div class="container">
+    <div class="features-content">
+      <h2 class="gradient-text" data-i18n="achievements.title">Logros y Estadísticas</h2>
+      <div class="features-list">
+        <div class="feature-item glass-card">
+          <div class="feature-number">01</div>
+          <h3 data-i18n="achievements.subscribers.title">100K+ Suscriptores</h3>
+          <p data-i18n="achievements.subscribers.description">Una comunidad increíble que crece día a día. Gracias por el apoyo constante.</p>
+        </div>
+        <div class="feature-item glass-card">
+          <div class="feature-number">02</div>
+          <h3 data-i18n="achievements.videos.title">500+ Videos</h3>
+          <p data-i18n="achievements.videos.description">Contenido de calidad constante. Gameplays, tutoriales, reviews y mucho más.</p>
+        </div>
+        <div class="feature-item glass-card">
+          <div class="feature-number">03</div>
+          <h3 data-i18n="achievements.views.title">10M+ Visualizaciones</h3>
+          <p data-i18n="achievements.views.description">Millones de horas de entretenimiento compartidas con la comunidad.</p>
+        </div>
+        <div class="feature-item glass-card">
+          <div class="feature-number">04</div>
+          <h3 data-i18n="achievements.stream.title">Stream Diario</h3>
+          <p data-i18n="achievements.stream.description">Conecta conmigo en vivo todos los días. Gaming, Q&A y más.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: var(--spacing-3xl);
+    font-size: var(--text-5xl);
+  }
+
+  .features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+  }
+
+  .feature-item {
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-number {
+    font-size: var(--text-6xl);
+    font-weight: 800;
+    background: linear-gradient(
+      135deg,
+      var(--color-accent-primary),
+      var(--color-accent-secondary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.3;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    line-height: 1;
+  }
+
+  .feature-item h3 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+  }
+
+  .feature-item p {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: var(--text-4xl);
+    }
+
+    .features-list {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+  }
+</style>
