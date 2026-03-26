@@ -261,21 +261,32 @@ a:hover {
   }
   
   .nav {
-    top: var(--spacing-sm);
-    width: calc(100% - var(--spacing-lg));
+    top: var(--spacing-xs);
+    width: max-content;
+    max-width: calc(100% - var(--spacing-sm));
     border-radius: 20px;
-    padding: var(--spacing-sm);
+    padding: 6px;
   }
   
   .nav-list {
-    gap: var(--spacing-sm);
+    gap: 4px;
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .nav-link {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: var(--text-sm);
+    padding: 6px 10px;
+    font-size: var(--text-xs);
+  }
+  
+  .lang-button {
+    padding: 4px;
+    gap: 4px;
+  }
+  
+  .lang-text {
+    padding: 4px 8px;
+    font-size: var(--text-xs);
   }
 }
 
