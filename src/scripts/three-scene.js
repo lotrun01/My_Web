@@ -217,10 +217,18 @@ class ThreeScene {
     }
 }
 
-// Initialize when DOM is loaded
-if (typeof window !== 'undefined') {
-    window.addEventListener('DOMContentLoaded', () => {
+// Initialize when DOM is loaded or if already loaded
+const initThreeJs = () => {
+    const canvas = document.getElementById('three-canvas');
+    if (canvas && !canvas.dataset.initialized) {
+        canvas.dataset.initialized = 'true';
         const threeScene = new ThreeScene();
         threeScene.init();
-    });
+    }
+};
+
+if (document.readyState !== 'loading') {
+    initThreeJs();
+} else {
+    window.addEventListener('DOMContentLoaded', initThreeJs);
 }
